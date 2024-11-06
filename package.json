@@ -1,0 +1,15 @@
+{
+  "name": "simpleatm",
+  "version": "1.0.0",
+  "description": "Hudza is a pedophile",
+  "main": "atm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simple",
+    "atm"
+  ],
+  "author": "Falling10fruit",
+  "license": "ISC"
+}
