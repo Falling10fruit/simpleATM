@@ -157,12 +157,11 @@ Andrew   | Quality Assurance
 Bennet   | Lead Programmer
 Harel    | Logician
 Shania   | Illustrator
-Budiyoga | fart smella
 
 Enter anything to go back `);
     
     if (input == "Budiyoga") {
-        console.log("Yes I really did nothing at all");
+        console.log("I was never here");
         welcomePage();
     } else { welcomePage(); }
 }
@@ -216,7 +215,7 @@ Input anything else to cancel
 }
 
 async function withdrawPage () {
-    console.log("\nYour current balance is " + database[currentUser].balance + " skaibadai bobux");
+    console.log("\nYour current balance is " + database[currentUser].balance + " robux");
     const amount = await prompt("How much would you like to withdraw? ");
     const amountFloat = parseFloat(amount);
 
@@ -239,7 +238,7 @@ Input anything else to cancel
 
     if (amountFloat > database[currentUser].balance) {
         const input = await prompt(`
-You do not have sufficient skaibadai bobux to withdraw as per your request
+You do not have sufficient robux to withdraw as per your request
 
 Input "1" to try again
 Input anything else to cancel
@@ -270,7 +269,7 @@ async function depositPage () {
     }
 
     database[currentUser].balance += amountFloat;
-    console.log("Successfully deposited " + amountFloat + " skaibadai bobux into " + currentUser + "'s balance");
+    console.log("Successfully deposited " + amountFloat + " robux into " + currentUser + "'s balance");
     systemAccess();
 }
 
