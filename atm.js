@@ -19,13 +19,13 @@ let currentUser = "";
 
 rl.on("close", () => {
     console.log("Saving...");
-    fs.writeFileSync("simpleAtmDatabase.json", JSON.stringify(database), (error) => { if (error) console.error(error) });
+    fs.writeFileSync("data.txt", JSON.stringify(database), (error) => { if (error) console.error(error) });
     console.log("Thank you for using our services!");
     process.exit(0);
 })
 
-if (fs.existsSync("simpleAtmDatabase.json")) {
-    fs.readFile("simpleAtmDatabase.json", "utf-8", (error, data) => {
+if (fs.existsSync("data.txt")) {
+    fs.readFile("data.txt", "utf-8", (error, data) => {
         if (error) console.error(error)
 
         database = JSON.parse(data);
@@ -33,8 +33,8 @@ if (fs.existsSync("simpleAtmDatabase.json")) {
     });
 
 } else {
-    console.log("Creating new instance of simpleAtmDatabase.json")
-    fs.appendFileSync("simpleAtmDatabase.json", JSON.stringify(database), (error) => { if (error) console.error(error) });
+    console.log("Creating new instance of data.json")
+    fs.appendFileSync("data.txt", JSON.stringify(database), (error) => { if (error) console.error(error) });
     welcomePage();
 };
 
